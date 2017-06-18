@@ -1,0 +1,6 @@
+<h3> Nova Tradução </h3>
+<hr>
+<%= form_for(@translation, url: translation_save_path) do |f| %>
+ <%= render partial: 'form', locals: {acao: "Criar",f: f}%>
+<%end%>
+<hr>
