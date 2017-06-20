@@ -1,6 +1,6 @@
 <h3>Editando Traduçoes<h3>
 <hr>
-<%= form_for(@translation,url: update_path) do |f| %>
+<%= form_for(@translation) do |f| %>
   <%= render partial: 'form', locals: {acao: "Editar", f: f} %>
 <%end%>
 <hr>

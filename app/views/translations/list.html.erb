@@ -1,0 +1,19 @@
+Lista de Traduções
+<hr>
+<table>
+  <% @translations.each do |translation| %>
+    <tr>
+      <th>
+        <%= link_to("A tradução de #{translation.portugues} para o inglês é #{translation.ingles}", translation_path(translation.id)) %>
+      </th>
+      <th>
+        <%= link_to("Editar", edit_translation_path(translation.id))%>
+      </th>
+      <th>
+       <%= link_to "Delete", translation_path(translation.id), method: :delete, data: {confirm: "Confirma Exclusão"} %>
+      </th>
+    <tr>
+  <% end %>
+</table>
+<hr>
+<%= link_to("Voltar", root_path)%>

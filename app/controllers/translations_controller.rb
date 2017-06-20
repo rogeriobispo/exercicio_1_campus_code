@@ -1,4 +1,4 @@
-class TranslationController < ApplicationController
+class TranslationsController < ApplicationController
 
   before_action :set_translation, only: [:show, :edit, :update, :destroy]
   before_action :translation_params, only: [:update]
@@ -25,6 +25,7 @@ class TranslationController < ApplicationController
 
   def list
     @translations = Translation.all
+    puts "Passou no list viado"
   end
 
   def show
@@ -35,7 +36,7 @@ class TranslationController < ApplicationController
 
   def destroy
     @translation.destroy
-    redirect_to translation_list_path
+    redirect_to translations_list_path
   end
   def set_translation
     @translation = Translation.find(params[:id])
